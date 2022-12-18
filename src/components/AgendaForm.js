@@ -44,7 +44,7 @@ export default function AgendaForm(props) {
   }
   function handleChangeTopic(e) {
     setTopic(e.target.value);
-    setWarningDisplayTopic();
+    setWarningDisplayTopic(e);
   }
   function AddTopics(e) {
     e.preventDefault();
@@ -154,41 +154,13 @@ export default function AgendaForm(props) {
                 {topic}
               </p>
             ))}
-            <small id={topicArrayId}>No Topics Added</small>
+
             <p id="final-line"></p>
             <h3 className="description">Refer the topics you added</h3>
+            <small id={topicArrayId}>No Topics Added</small>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-/* <div class="container">
-        <div class="view-agenda">
-            <button class="view-agenda-button">
-                Click to view Agenda
-            </button>
-        </div>
-        <div class="agenda-form">
-            <form action="" class="create-agenda-form">
-                <table>
-                    <tr><label class="form-labels" for="title"><b>Title</b></label></tr>
-                    <tr><input type="text" class="input-box" id="title" placeholder="Enter the Title"></tr>
-                    <tr><label class="form-labels" for="description"><b>Description</b></label></tr>
-                    <tr><input type="text" class="input-box" id="description" placeholder="Enter the Description"></tr>
-                    <tr><label class="form-labels" for="topic"><b>Enter Topic</b></label></tr>
-                    <tr class="final-row">
-                        <td class="input-box-td"><input type="text" class="input-box input-box-topic" id="topic" placeholder="Enter the Topic"> </td>
-                        <td class="button-1-td"><button type="submit" class="form-button">+ Add Topic</button></td>
-                        <td class="button-2-td"><button type="submit" class="form-button">Submit Agenda</button></td>
-                    </tr>
-                </table>
-            </form>
-            <div class="agenda-list-item">
-                <h3 class="title">Added Topic</h3>
-                <p id="final-line"></p>
-                <h3 class="description">Refer the topics you added</h3>
-            </div>
-        </div>
-    </div> */
